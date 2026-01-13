@@ -40,7 +40,7 @@ const team = [
   {
     name: 'Moorthy',
     role: 'Master Barber',
-    experience: '20+ Years',
+    experience: '35+ Years',
     image: '',
   },
   {
@@ -72,7 +72,7 @@ export default function About() {
             About <span className="text-gray-300">BlueDiamond</span>
           </h1>
           <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-            Crafting excellence in men's grooming since 1992
+            Crafting excellence in men's grooming since 1989
           </p>
         </div>
       </div>
@@ -85,13 +85,13 @@ export default function About() {
                 Our <span className="text-gray-300">Journey</span>
               </h2>
               <p className="text-gray-400 text-lg mb-6 leading-relaxed">
-                Founded in 1992, <span className="text-blue-800 font-semibold">Blue</span><span className="text-gray-300 font-semibold">Diamond</span> was established with a clear purpose: to deliver exceptional grooming services that blend classic barbering techniques with modern style and precision.
+                Founded in 1989, <span className="text-blue-800 font-semibold">Blue</span><span className="text-gray-300 font-semibold">Diamond</span> was established with a clear purpose: to deliver exceptional grooming services that blend classic barbering techniques with modern style and precision.
               </p>
               <p className="text-gray-400 text-lg mb-6 leading-relaxed">
                 What began as a trusted local barbershop has grown into a respected grooming destination, serving generations of loyal clients. Our reputation is built on quality craftsmanship, personalized service, and attention to detail.
               </p>
               <p className="text-gray-400 text-lg leading-relaxed">
-                Today, <span className="text-blue-800 font-semibold">Blue</span><span className="text-gray-300 font-semibold">Diamond</span> continues to set the standard in men’s grooming—offering premium haircuts, beard styling, and complete grooming solutions while honoring the traditions that define our legacy.
+                Today, <span className="text-blue-800 font-semibold">Blue</span><span className="text-gray-300 font-semibold">Diamond</span> continues to set the standard in men’s grooming-offering premium haircuts, beard styling, and complete grooming solutions while honoring the traditions that define our legacy.
               </p>
             </div>
             <div className="relative">
@@ -158,47 +158,48 @@ export default function About() {
               Experienced professionals dedicated to making you look your best
             </p>
           </div>
-          {/* <div className="flex justify-center"> */}
-          <div className="flex justify-center">
+          <div className="flex justify-center gap-8 flex-wrap">
             {team.map((member, index) => (
               <div
                 key={index}
-                className="group relative bg-gradient-to-br from-zinc-900 to-black border border-blue-800/20 rounded-xl overflow-hidden hover:border-blue-800/50 transition-all duration-500"
+                className="group relative bg-gradient-to-br from-zinc-900 to-black 
+      border border-blue-800/20 rounded-xl overflow-hidden 
+      hover:border-blue-800/50 transition-all duration-500 w-[300px]"
                 style={{
                   animation: `fadeInUp 0.6s ease-out ${index * 0.1}s both`,
                 }}
               >
-                <div className="group relative bg-gradient-to-br from-zinc-900 to-black border border-blue-800/20 rounded-xl overflow-hidden">
-                  <div className="relative h-80 overflow-hidden py-16">
-                    <Image
-                      src={member.image}
-                      alt={member.name}
-                      fill
-                      sizes="(max-width: 768px) 100vw, 33vw"
-                      className="object-cover group-hover:scale-110 transition-transform duration-500"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent" />
-                  </div>
-
-                  <div className="p-6 text-center">
-                    <h3 className="text-2xl font-bold text-white mb-1 group-hover:text-blue-800 transition">
-                      {member.name}
-                    </h3>
-                    <p className="text-blue-800 font-semibold">{member.role}</p>
-                    <p className="text-gray-400 text-sm mt-1">
-                      {member.experience} Experience
-                    </p>
-                  </div>
+                <div className="relative h-80 overflow-hidden">
+                  <Image
+                    src={member.image}
+                    alt={member.name}
+                    fill
+                    sizes="(max-width: 768px) 100vw, 300px"
+                    className="object-cover group-hover:scale-110 transition-transform duration-500"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent" />
                 </div>
 
+                <div className="p-6 text-center">
+                  <h3 className="text-2xl font-bold text-white mb-1 group-hover:text-blue-800 transition">
+                    {member.name}
+                  </h3>
+
+                  <p className="text-blue-800 font-semibold">
+                    {member.role}
+                  </p>
+
+                  <p className="text-gray-400 text-sm mt-1">
+                    {member.experience} Experience
+                  </p>
+                </div>
               </div>
             ))}
           </div>
         </div>
-        {/* </div> */}
-      </section>
+      </section >
 
-      <style jsx>{`
+    <style jsx>{`
         @keyframes fadeInUp {
           from {
             opacity: 0;
@@ -210,6 +211,6 @@ export default function About() {
           }
         }
       `}</style>
-    </div>
+    </div >
   );
 }
