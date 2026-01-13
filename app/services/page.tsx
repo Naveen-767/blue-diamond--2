@@ -4,49 +4,105 @@ import ServiceCard from '@/components/ServiceCard';
 import { Scissors, Sparkles, Palette, Waves, Zap, Star } from 'lucide-react';
 
 const services = [
-   {
+
+  {
     title: 'Haircut & Styling',
-    description: 'Precision haircuts tailored to your face shape and personal style.',
+    description:
+      'Precision haircuts tailored to your face shape and personal style.',
     image: '/services/haircut.jpg',
     features: ['Style Consultation', 'Wash & Cut', 'Professional Styling'],
   },
   {
     title: 'Beard Grooming',
-    description: 'Expert beard trimming, shaping, and conditioning.',
+    description:
+      'Expert beard trimming, shaping, and premium grooming care.',
     image: '/services/beard.jpg',
     features: ['Hot Towel Treatment', 'Trim & Shape', 'Premium Beard Oil'],
   },
   {
-    title: 'Facial',
-    description: 'Refreshing facial treatment to cleanse and hydrate your skin.',
-    image: '/services/facial.jpg',
-    features: ['Deep Cleansing', 'Exfoliation', 'Moisturizing'],
-  },
-  {
-    title: 'Hair Straightening & Curling',
-    description: 'Professional hair straightening and curling to achieve the perfect look.',
+    title: 'Hair Straightening',
+    description:
+      'Professional straightening treatment for smooth and manageable hair.',
     image: '/services/straightening_curling.jpg',
-    features: ['Heat Styling', 'Smoothing Treatment', 'Long-Lasting Hold'],
+    features: ['Hair Analysis', 'Smoothing Process', 'Long-Lasting Results'],
   },
   {
-    title: 'Head Massage & Oil Treatment',
-    description: 'Relaxing head massage with nourishing oils to strengthen hair and reduce stress.',
+    title: 'Hair Smoothening',
+    description:
+      'Advanced smoothening treatment to reduce frizz and add shine.',
+    image: '/services/smoothening.jpg',
+    features: ['Frizz Control', 'Soft Finish', 'Damage Protection'],
+  },
+  {
+    title: 'Keratin Treatment',
+    description:
+      'Keratin-based treatment to strengthen, smooth, and repair damaged hair.',
+    image: '/services/keratin.jpg',
+    features: ['Protein Infusion', 'Hair Repair', 'Glossy Finish'],
+  },
+  {
+    title: 'Botox Treatment',
+    description:
+      'Deep conditioning treatment that restores moisture and hair health.',
+    image: '/services/botox.jpg',
+    features: ['Deep Nourishment', 'Hair Repair', 'Instant Shine'],
+  },
+  {
+    title: 'Nanoplastia Treatment',
+    description:
+      'Advanced hair treatment for smooth, straight, and healthy hair.',
+    image: '/services/nanoplastia.jpg',
+    features: ['Formaldehyde-Free', 'Long-Lasting Effect', 'Hair Strength'],
+  },
+  {
+    title: 'Head Oil Massage',
+    description:
+      'Relaxing head massage with nourishing oils for scalp health.',
     image: '/services/head_massage.png',
-    features: ['Oil Application', 'Scalp Massage', 'Hair Nourishment'],
+    features: ['Oil Application', 'Scalp Massage', 'Stress Relief'],
   },
   {
-    title: 'Hair Coloring',
-    description: 'Modern hair coloring techniques for a fresh, natural, and vibrant look.',
-    image: '/services/hair_coloring.jpg',
-    features: ['Color Consultation', 'Application', 'Aftercare Advice'],
+    title: 'Bleaching',
+    description:
+      'Professional bleaching service to brighten skin tone and remove tan.',
+    image: '/services/bleaching.jpg',
+    features: ['Even Skin Tone', 'Gentle Products', 'Instant Glow'],
   },
-];
-
-const addons = [
-  { name: 'Hot Towel Shave', price: '$20' },
-  { name: 'Hair Treatment', price: '$15' },
-  { name: 'Eyebrow Trim', price: '$10' },
-  { name: 'Grey Blending', price: '$25' },
+  {
+    title: 'Clean-Up',
+    description:
+      'Quick skin clean-up treatment to remove impurities and refresh your face.',
+    image: '/services/cleanup.jpg',
+    features: ['Deep Cleansing', 'Exfoliation', 'Skin Refresh'],
+  },
+  {
+    title: 'De-Tan',
+    description:
+      'Effective de-tan treatment to remove sun tan and restore natural skin tone.',
+    image: '/services/detan.jpg',
+    features: ['Tan Removal', 'Cooling Mask', 'Brightening Effect'],
+  },
+  {
+    title: 'Facial (Normal / Advanced)',
+    description:
+      'Customized facial treatments for healthy, glowing, and rejuvenated skin.',
+    image: '/services/facial.jpg',
+    features: ['Skin Analysis', 'Massage Therapy', 'Hydration & Glow'],
+  },
+  {
+    title: 'Manicure',
+    description:
+      'Complete hand care treatment for clean, soft, and well-groomed hands.',
+    image: '/services/manicure.jpg',
+    features: ['Nail Shaping', 'Cuticle Care', 'Hand Massage'],
+  },
+  {
+    title: 'Pedicure',
+    description:
+      'Relaxing foot care treatment for healthy, smooth, and refreshed feet.',
+    image: '/services/pedicure.jpg',
+    features: ['Foot Soak', 'Heel Care', 'Foot Massage'],
+  },
 ];
 
 export default function Services() {
