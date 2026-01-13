@@ -252,7 +252,7 @@ export default function Contact() {
 
               {/* Map */}
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d243.03236524711355!2d80.25275401411493!3d12.93868104219405!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMTLCsDU2JzE5LjQiTiA4MMKwMTUnMDkuMyJF!5e0!3m2!1sen!2sin!4v1767971902963!5m2!1sen!2sin"
+                src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3888.3618503080934!2d80.254746!3d12.948682000000002!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMTLCsDU2JzU1LjMiTiA4MMKwMTUnMTcuMSJF!5e0!3m2!1sen!2sin!4v1768319529172!5m2!1sen!2sin"
                 className="w-full h-full"
                 style={{ border: 0 }}
                 loading="lazy"
