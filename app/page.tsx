@@ -27,9 +27,9 @@ const featuredServices = [
 ];
 
 const stats = [
-  { icon: Users, value: '10K+', label: 'Happy Clients' },
-  { icon: Award, value: '15+', label: 'Years Experience' },
-  { icon: Scissors, value: '50K+', label: 'Haircuts Done' },
+  { icon: Users, value: '30K+', label: 'Happy Clients' },
+  { icon: Award, value: '35+', label: 'Years Experience' },
+  { icon: Scissors, value: '50K+', label: 'Done' },
   { icon: Clock, value: '24/7', label: 'Booking Available' },
 ];
 
@@ -114,12 +114,12 @@ export default function Home() {
                 Excellence in Every <span className="text-gray-300">Detail</span>
               </h2>
               <p className="text-gray-400 text-lg mb-8 leading-relaxed">
-               At <span className="text-blue-800">Blue</span><span className="text-gray-300">Diamond</span>, we believe grooming is an art form. Since 1992, our master barbers have been combining classic techniques with modern styles to deliver exceptional results every time.
+               At <span className="text-blue-800">Blue</span><span className="text-gray-300">Diamond</span>, we believe grooming is an art form. Since 1989, our master barbers have been combining classic techniques with modern styles to deliver exceptional results every time.
               </p>
 
               <div className="space-y-4">
                 {[
-                  'Expert Barbers with 15+ years of experience',
+                  'Expert Barbers with 35+ years of experience',
                   'Premium Quality Products & Tools for flawless results',
                   'Comfortable & Luxurious Environment to relax and unwind',
                   'Personalized Consultations tailored to each client’s style and needs',

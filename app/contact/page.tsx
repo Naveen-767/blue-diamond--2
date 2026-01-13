@@ -1,4 +1,4 @@
-'use client';
+ 'use client';
 
 import { useState } from 'react';
 import { MapPin, Phone, Mail, Clock, Send } from 'lucide-react';
@@ -7,17 +7,17 @@ const contactInfo = [
   {
     icon: MapPin,
     title: 'Visit Us',
-    details: ['No 3/115, Near Signal, East Coast Road, Vettuvankeni, Chennai-600115, Tamil Nadu'],
+    details: ['No.4/101 ECR Road, Thanthai Periyar Street, Neelangarai, Chennai -600115'],
   },
   {
     icon: Phone,
     title: 'Call Us',
-    details: ['+91 8056111141'],
+    details: ['+91 866805493'],
   },
   {
     icon: Mail,
     title: 'Email Us',
-    details: ['bluediamondsaloonmens@gmail'],
+    details: ['bluediamondsalonspa@gmail.com'],
   },
   {
     icon: Clock,
@@ -88,7 +88,7 @@ export default function Contact() {
                 </div>
                 <h3 className="text-xl font-bold text-white mb-3">{info.title}</h3>
                 {info.details.map((detail, i) => (
-                  <p key={i} className="text-gray-400">
+                  <p key={i} className="text-gray-400 overflow-hidden">
                     {detail}
                   </p>
                 ))}

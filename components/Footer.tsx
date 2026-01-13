@@ -5,7 +5,7 @@ export default function Footer() {
   return (
     <footer className="bg-black text-gray-300 border-t border-blue-800/20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           <div className="space-y-4">
             <div className="flex items-center space-x-2">
               <Scissors className="h-8 w-8 text-blue-800" />
@@ -38,13 +38,18 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
+                <Link href="/services" className="hover:text-blue-800 transition-colors">
+                  Services
+                </Link>
+              </li>
+              <li>
                 <Link href="/about" className="hover:text-blue-800 transition-colors">
                   About Us
                 </Link>
               </li>
               <li>
-                <Link href="/services" className="hover:text-blue-800 transition-colors">
-                  Services
+                <Link href="/gallery" className="hover:text-blue-800 transition-colors">
+                  Style
                 </Link>
               </li>
               <li>
@@ -55,30 +60,22 @@ export default function Footer() {
             </ul>
           </div>
 
-          <div>
-            <h3 className="text-white font-semibold text-lg mb-4">Services</h3>
-            <ul className="space-y-2">
-              <li className="hover:text-blue-800 transition-colors cursor-pointer">Haircut & Styling</li>
-              <li className="hover:text-blue-800 transition-colors cursor-pointer">Beard Grooming</li>
-              <li className="hover:text-blue-800 transition-colors cursor-pointer">Hair Coloring</li>
-              <li className="hover:text-blue-800 transition-colors cursor-pointer">Facial Treatment</li>
-            </ul>
-          </div>
+         
 
           <div>
             <h3 className="text-white font-semibold text-lg mb-4">Contact Info</h3>
             <ul className="space-y-3">
               <li className="flex items-start space-x-3">
                 <MapPin className="h-5 w-5 text-blue-800 mt-0.5 flex-shrink-0" />
-                <span className="text-sm">No 3/115, Near Signal, East Coast Road, Vettuvankeni, Chennai-600115, Tamil Nadu</span>
+                <span className="text-sm">No.4/101 ECR Road, Thanthai Periyar Street, Neelangarai, Chennai -600115, Tamilnadu</span>
               </li>
               <li className="flex items-center space-x-3">
                 <Phone className="h-5 w-5 text-blue-800 flex-shrink-0" />
-                <span className="text-sm">+91 8056111141</span>
+                <span className="text-sm">+91 8668054693</span>
               </li>
               <li className="flex items-center space-x-3">
                 <Mail className="h-5 w-5 text-blue-800 flex-shrink-0" />
-                <span className="text-sm">bluediamondsaloonmens@gmail.com</span>
+                <span className="text-sm">bluediamondsalonspa@gmail.com</span>
               </li>
             </ul>
           </div>
