@@ -4,18 +4,18 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 
 const styles = [
-  { id: 1, name: "Wolf Cut", img: "team/ganesh.jpeg" },
-  { id: 2, name: "Mullet", img: "" },
-  { id: 3, name: "Wavy Hair", img: "" },
-  { id: 4, name: "Korean Perm", img: "" },
-  { id: 5, name: "Fringe Cut", img: "" },
-  { id: 6, name: "Pompadour", img: "" },
-  { id: 7, name: "Faux Hawk", img: "" },
-  { id: 8, name: "Spiky Hair", img: "" },
-  { id: 9, name: "Fade Cut", img: "" },
-  { id: 10, name: "Quiff", img: "" },
-  { id: 11, name: "Undercut", img: "" },
-  { id: 12, name: "Textured Crop", img: "" }
+  { id: 1, name: "Wolf Cut", img: "style/wolf.jpeg" },
+  { id: 2, name: "Mullet", img: "style/mullet.jpeg" },
+  { id: 3, name: "Wavy Hair", img: "style/wavy.jpeg" },
+  { id: 4, name: "Korean Perm", img: "style/korean.jpeg" },
+  { id: 5, name: "Fringe Cut", img: "style/fringe.jpeg" },
+  { id: 6, name: "Pompadour", img: "style/pompadour.jpeg" },
+  { id: 7, name: "Faux Hawk", img: "style/faux.jpeg" },
+  { id: 8, name: "Spiky Hair", img: "style/spiky.jpeg" },
+  { id: 9, name: "Fade Cut", img: "style/fade.jpeg" },
+  { id: 10, name: "Quiff", img: "style/quiff.jpeg" },
+  { id: 11, name: "Undercut", img: "style/under.jpeg" },
+  { id: 12, name: "Textured Crop", img: "style/crop.jpeg" }
 ];
 
 export default function GalleryPage() {
