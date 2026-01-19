@@ -1,3 +1,87 @@
+// "use client";
+// import Image from "next/image";
+// import { useState } from "react";
+// import { motion } from "framer-motion";
+
+// const styles = [
+//   { id: 1, name: "Wolf Cut", img: "style/wolf.jpeg" },
+//   { id: 2, name: "Mullet", img: "style/mullet.jpeg" },
+//   { id: 3, name: "Wavy Hair", img: "style/wavy.jpeg" },
+//   { id: 4, name: "Korean Perm", img: "style/korean.jpeg" },
+//   { id: 5, name: "Fringe Cut", img: "style/fringe.jpeg" },
+//   { id: 6, name: "Pompadour", img: "style/pompadour.jpeg" },
+//   { id: 7, name: "Faux Hawk", img: "style/faux.jpeg" },
+//   { id: 8, name: "Spiky Hair", img: "style/spiky.jpeg" },
+//   { id: 9, name: "Fade Cut", img: "style/fade.jpeg" },
+//   { id: 10, name: "Quiff", img: "style/quiff.jpeg" },
+//   { id: 11, name: "Undercut", img: "style/under.jpeg" },
+//   { id: 12, name: "Textured Crop", img: "style/crop.jpeg" }
+// ];
+
+// export default function GalleryPage() {
+//   const [openId, setOpenId] = useState<number | null>(null);
+
+//   return (
+//     <div className="min-h-screen bg-black pt-20">
+//       <div
+//         className="relative h-[60vh] flex items-center justify-center bg-cover bg-center"
+//         style={{
+//           backgroundImage: 'url(https://images.pexels.com/photos/1570806/pexels-photo-1570806.jpeg?auto=compress&cs=tinysrgb&w=1920)',
+//         }}
+//       >
+//         <div className="absolute inset-0 bg-gradient-to-r from-black via-black/70 to-black/50" />
+//         <div className="relative text-center px-4">
+//           <div className="inline-block mb-4 px-4 py-1.5 bg-blue-800/10 border border-blue-800/30 rounded-full">
+//             <span className="text-blue-800 text-sm font-semibold tracking-wider">
+//               STYLE GALLERY
+//             </span>
+//           </div>
+//           <h1 className="text-5xl md:text-7xl font-bold text-blue-800 mb-6">
+//             Pick Your <span className="text-gray-300"> Next Look</span>
+//           </h1>
+//           <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+//             Explore expertly crafted hair and beard styles. Tap a look to see details and make it yours.
+//           </p>
+//         </div>
+//       </div>
+
+//       {/* Gallery Grid */}
+//       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 mt-12">
+//         {styles.map((style, index) => (
+//           <motion.div
+//             key={style.id}
+//             initial={{ opacity: 0, y: 50 }}
+//             whileInView={{ opacity: 1, y: 0 }}
+//             viewport={{ once: true }}
+//             transition={{ delay: index * 0.1, duration: 0.6, ease: "easeOut" }}
+//             className="relative rounded-2xl overflow-hidden shadow-lg"
+//           >
+//             <button
+//               onClick={() => setOpenId(openId === style.id ? null : style.id)}
+//               className="relative h-64 w-full focus:outline-none"
+//             >
+//               {/* Glassmorphism Background */}
+//               <div className="absolute inset-0 bg-white/5  rounded-2xl border border-white/10 z-10 transition-all duration-500 hover:scale-105 hover:bg-white/10" />
+//               <Image
+//                 src={style.img}
+//                 alt={style.name}
+//                 fill
+//                 className="object-cover rounded-2xl transition-transform duration-500 hover:scale-110"
+//               />
+//               <div className="absolute inset-0 bg-black/30 rounded-2xl" />
+//               <h3 className="absolute bottom-4 left-4 text-lg font-semibold text-white z-20">
+//                 {style.name}
+//               </h3>
+//             </button>
+//           </motion.div>
+//         ))}
+//       </div>
+//     </div >
+//   );
+// }
+
+
+
 "use client";
 import Image from "next/image";
 import { useState } from "react";
@@ -15,67 +99,56 @@ const styles = [
   { id: 9, name: "Fade Cut", img: "style/fade.jpeg" },
   { id: 10, name: "Quiff", img: "style/quiff.jpeg" },
   { id: 11, name: "Undercut", img: "style/under.jpeg" },
-  { id: 12, name: "Textured Crop", img: "style/crop.jpeg" }
+  { id: 12, name: "Textured Crop", img: "style/crop.jpeg" },
 ];
 
 export default function GalleryPage() {
   const [openId, setOpenId] = useState<number | null>(null);
 
   return (
-    <div className="min-h-screen bg-black pt-20">
-      <div
-        className="relative h-[60vh] flex items-center justify-center bg-cover bg-center"
-        style={{
-          backgroundImage: 'url(https://images.pexels.com/photos/1570806/pexels-photo-1570806.jpeg?auto=compress&cs=tinysrgb&w=1920)',
-        }}
-      >
-        <div className="absolute inset-0 bg-gradient-to-r from-black via-black/70 to-black/50" />
-        <div className="relative text-center px-4">
-          <div className="inline-block mb-4 px-4 py-1.5 bg-blue-800/10 border border-blue-800/30 rounded-full">
-            <span className="text-blue-800 text-sm font-semibold tracking-wider">
-              STYLE GALLERY
-            </span>
-          </div>
-          <h1 className="text-5xl md:text-7xl font-bold text-blue-800 mb-6">
-            Pick Your <span className="text-gray-300"> Next Look</span>
-          </h1>
-          <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-            Explore expertly crafted hair and beard styles. Tap a look to see details and make it yours.
-          </p>
-        </div>
-      </div>
-
+    <div className="min-h-screen bg-black pt-20 px-4">
       {/* Gallery Grid */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 mt-12">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 xl:grid-cols-4 gap-8 mt-12">
         {styles.map((style, index) => (
           <motion.div
             key={style.id}
-            initial={{ opacity: 0, y: 50 }}
+            initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ delay: index * 0.1, duration: 0.6, ease: "easeOut" }}
-            className="relative rounded-2xl overflow-hidden shadow-lg"
+            transition={{ delay: index * 0.08, duration: 0.6 }}
+            className="group relative"
           >
             <button
-              onClick={() => setOpenId(openId === style.id ? null : style.id)}
-              className="relative h-64 w-full focus:outline-none"
+              onClick={() =>
+                setOpenId(openId === style.id ? null : style.id)
+              }
+              className="relative w-full aspect-[3/4] rounded-2xl overflow-hidden focus:outline-none"
             >
-              {/* Glassmorphism Background */}
-              <div className="absolute inset-0 bg-white/5  rounded-2xl border border-white/10 z-10 transition-all duration-500 hover:scale-105 hover:bg-white/10" />
+              {/* Glassmorphism Layer */}
+              <div className="absolute inset-0 z-10 rounded-2xl  border transition-all duration-500" />
+
+              {/* Image */}
               <Image
                 src={style.img}
                 alt={style.name}
                 fill
-                className="object-cover rounded-2xl transition-transform duration-500 hover:scale-110"
+                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
+                className="object-cover transition-transform duration-700 group-hover:scale-110"
               />
-              <div className="absolute inset-0 bg-black/30 rounded-2xl" />
-              <h3 className="absolute bottom-4 left-4 text-lg font-semibold text-white z-20">
-                {style.name}
-              </h3>
+
+              {/* Dark Overlay */}
+              <div className="absolute inset-0 bg-black/35 z-0" />
+
+              {/* Title */}
+              <div className="absolute bottom-4 left-4 right-4 z-20">
+                <h3 className="text-xl font-semibold text-gray-700 transition-colors duration-300 group-hover:text-blue-800">
+                  {style.name}
+                </h3>
+              </div>
             </button>
           </motion.div>
         ))}
       </div>
-    </div >
+    </div>
   );
 }
