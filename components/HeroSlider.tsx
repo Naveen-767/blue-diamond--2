@@ -3,7 +3,7 @@
 import { useState, useEffect } from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 import { cn } from '@/lib/utils';
-import Link from 'next/link';
+import Link from "next/link";
 
 const slides = [
   {
@@ -32,9 +32,11 @@ export default function HeroSlider() {
 
   useEffect(() => {
     if (!isAutoPlaying) return;
+
     const interval = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % slides.length);
     }, 5000);
+
     return () => clearInterval(interval);
   }, [isAutoPlaying]);
 
@@ -49,8 +51,7 @@ export default function HeroSlider() {
   };
 
   return (
-    <section className="relative h-screen w-full overflow-hidden">
-      {/* SLIDES */}
+    <div className="relative h-screen w-full overflow-hidden">
       {slides.map((slide, index) => (
         <div
           key={index}
@@ -69,7 +70,7 @@ export default function HeroSlider() {
           </div>
 
           <div className="relative h-full flex items-center">
-            <div className="max-w-7xl mx-auto px-4 w-full">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
               <div
                 className={cn(
                   'max-w-2xl transition-all duration-1000 delay-300',
@@ -83,37 +84,32 @@ export default function HeroSlider() {
                     {slide.subtitle}
                   </span>
                 </div>
-
-                <h1 className="text-4xl md:text-7xl font-bold text-blue-800 mb-6 leading-tight">
+                <h1 className="text-5xl md:text-7xl font-bold text-blue-800 mb-6 leading-tight">
                   {slide.title.split(' ').map((word, i) => (
                     <span
                       key={i}
-                      className={cn('inline-block mr-4', i === 1 && 'text-gray-300')}
+                      className={cn(
+                        'inline-block mr-4',
+                        i === 1 && 'text-gray-300'
+                      )}
                       style={{
-                        animation:
-                          index === currentSlide
-                            ? `slideUp 0.8s ease-out ${i * 0.1}s both`
-                            : 'none',
+                        animation: index === currentSlide ? `slideUp 0.8s ease-out ${i * 0.1}s both` : 'none',
                       }}
                     >
                       {word}
                     </span>
                   ))}
                 </h1>
-
-                <p className="text-xl text-gray-300 mb-8">
-                  {slide.description}
-                </p>
-
-                <div className="flex gap-4">
+                <p className="text-xl text-gray-300 mb-8">{slide.description}</p>
+                <div className="flex flex-wrap gap-4">
                   <Link href="/contact">
-                    <button className="px-8 py-4 bg-blue-800 text-gray-300 font-bold hover:bg-blue-600 transition">
+                    <button className="px-8 py-4 bg-blue-800 text-gray-300 font-bold  hover:bg-blue-600 transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-blue-800/50">
                       Book Appointment
                     </button>
                   </Link>
 
                   <Link href="/services">
-                    <button className="px-8 py-4 border-2 border-gray-300 text-blue-800 font-bold hover:bg-gray-300 transition">
+                    <button className="px-8 py-4 bg-transparent border-2 border-gray-300 text-blue-800 font-bold rounded-lg hover:bg-gray-300 hover:text-blue-800 transition-all duration-300">
                       Our Services
                     </button>
                   </Link>
@@ -124,28 +120,43 @@ export default function HeroSlider() {
         </div>
       ))}
 
-      {/* ✅ PERFECT BOTTOM CORNER BUTTONS (HERO ONLY) */}
       <button
         onClick={prevSlide}
-        aria-label="Previous slide"
         className="absolute bottom-4 left-4 md:bottom-6 md:left-6 z-30
                    p-4 rounded-full bg-black/60 backdrop-blur-md
                    border border-white/20 text-white
                    hover:bg-blue-800 transition active:scale-95"
       >
-        <ChevronLeft className="h-6 w-6" />
+        <ChevronLeft className="h-6 w-6 group-hover:scale-110 transition-transform" />
       </button>
 
       <button
         onClick={nextSlide}
-        aria-label="Next slide"
         className="absolute bottom-4 right-4 md:bottom-6 md:right-6 z-30
                    p-4 rounded-full bg-black/60 backdrop-blur-md
                    border border-white/20 text-white
                    hover:bg-blue-800 transition active:scale-95"
       >
-        <ChevronRight className="h-6 w-6" />
+        <ChevronRight className="h-6 w-6 group-hover:scale-110 transition-transform" />
       </button>
+
+      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex space-x-3 z-10">
+        {slides.map((_, index) => (
+          <button
+            key={index}
+            onClick={() => {
+              setCurrentSlide(index);
+              setIsAutoPlaying(false);
+            }}
+            className={cn(
+              'h-2 rounded-full transition-all duration-300',
+              index === currentSlide
+                ? 'w-12 bg-blue-800'
+                : 'w-2 bg-white/50 hover:bg-white/80'
+            )}
+          />
+        ))}
+      </div>
 
       <style jsx>{`
         @keyframes slideUp {
@@ -159,6 +170,8 @@ export default function HeroSlider() {
           }
         }
       `}</style>
-    </section>
+    </div>
   );
 }
+
+
