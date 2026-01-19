@@ -96,9 +96,9 @@ const styles = [
   { id: 6, name: "Pompadour", img: "style/pompadour.jpeg" },
   { id: 7, name: "Faux Hawk", img: "style/faux.jpeg" },
   { id: 8, name: "Spiky Hair", img: "style/spiky.jpeg" },
-  { id: 9, name: "Fade Cut", img: "style/fade.jpeg" },
-  { id: 10, name: "Quiff", img: "style/quiff.jpeg" },
-  { id: 11, name: "Undercut", img: "style/under.jpeg" },
+  // { id: 9, name: "Fade Cut", img: "style/fade.jpeg" },
+  // { id: 10, name: "Quiff", img: "style/quiff.jpeg" },
+  // { id: 11, name: "Undercut", img: "style/under.jpeg" },
   { id: 12, name: "Textured Crop", img: "style/crop.jpeg" },
 ];
 
