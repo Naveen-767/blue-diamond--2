@@ -79,11 +79,11 @@ const services = [
     title: 'De-Tan',
     description:
       'Effective de-tan treatment to remove sun tan and restore natural skin tone.',
-    image: '/services/detan.jpg',
+    image: '/services/detan.jpeg',
     features: ['Tan Removal', 'Cooling Mask', 'Brightening Effect'],
   },
   {
-    title: 'Facial (Normal / Advanced)',
+    title: 'Facial',
     description:
       'Customized facial treatments for healthy, glowing, and rejuvenated skin.',
     image: '/services/facial.jpg',
@@ -93,14 +93,14 @@ const services = [
     title: 'Manicure',
     description:
       'Complete hand care treatment for clean, soft, and well-groomed hands.',
-    image: '/services/manicure.jpg',
+    image: '/services/manicure.jpeg',
     features: ['Nail Shaping', 'Cuticle Care', 'Hand Massage'],
   },
   {
     title: 'Pedicure',
     description:
       'Relaxing foot care treatment for healthy, smooth, and refreshed feet.',
-    image: '/services/pedicure.jpg',
+    image: '/services/pedicure.jpeg',
     features: ['Foot Soak', 'Heel Care', 'Foot Massage'],
   },
 ];
@@ -132,7 +132,7 @@ export default function Services() {
 
       <section className="py-20 bg-gradient-to-b from-zinc-900 to-black">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
             {services.map((service, index) => (
               <div
                 key={index}
